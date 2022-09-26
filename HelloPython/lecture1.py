@@ -26,6 +26,26 @@
 #Арифметические операции
 # +, -, *, /, %, //, **
 
+# Приоритет операций
+# **, ⊕, ⊖, *, /, //, %, +, -
+# ( ) Скобки меняют приоритет
+
+# exp1 = 2**3 - 10 % 5 + 2*3
+# exp2 = 2**3 - 10 / 5 + 2*3   (2**3) - (10 / 5) + (2*3)
+# print(exp1) # 14.0 или 14
+# print(exp2) # 12.0 или 12
+
+# Сокращённые операции и операции присваивания
+# Демонстрация
+# iter = 2
+# iter += 3 # iter = iter + 3
+# iter -= 4 # iter = iter - 4
+# iter *= 5 # iter = iter * 5
+# iter /= 5 # iter = iter / 5
+# iter //= 5 # iter = iter // 5  - целочисленное деление
+# iter %= 5 # iter = iter % 5   - остаток от деления
+# iter **= 5 # iter = iter ** 5 - возведение в степень
+
 # (), Сокращенные операции
 #a = 5
 #a +=5
@@ -117,18 +137,18 @@
 # Функции
 #Это фрагмент программы, используемый многократно
 
-def f(x):
-   return x**2
-def f(x):
-   if x == 1:
-       return 'Целое'
-   elif x == 2.3:
-      return 23
-   else:
-       return
-print(f(1)) # Целое
-print(f(2.3)) # 23
-print(f(28)) # None
-print(type(f(1))) # str
-print(type(f(2.3))) # int
-print(type(f(28))) # NoneType
+# def f(x):
+#    return x**2
+# def f(x):
+#    if x == 1:
+#        return 'Целое'
+#    elif x == 2.3:
+#       return 23
+#    else:
+#        return
+# print(f(1)) # Целое
+# print(f(2.3)) # 23
+# print(f(28)) # None
+# print(type(f(1))) # str
+# print(type(f(2.3))) # int
+# print(type(f(28))) # NoneType
