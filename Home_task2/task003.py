@@ -4,8 +4,6 @@
 
 n = int(input("Введите целое положительное число N: "))
 res_list = []
-m = 0
 for i in range(1, n + 1):
-    m = round(((1 + 1/i) ** i), 2)
-    res_list.append(m)
+    res_list.append(round(((1 + 1/i) ** i), 2))
 print(f"Для N = {n} последовательность чисел: {res_list} \nСумма чисел последовательности равна {sum(res_list)}")
