@@ -15,7 +15,7 @@
 number = input("Введите число: ")
 n = int(float((number).replace(",", ".")) * (10 ** (len(number) - 2)))
 summa = 0 
-while (n != 0):
+while n != 0:
     summa += n % 10
     n = n // 10 
 print(f"Сумма цифр числа {number} равна:", summa)
