@@ -9,14 +9,13 @@
 # for digit in numb:
 #     if digit.isdigit():
 #         summa += int(digit)
-#print(f"Сумма цифр числа {numb} равна:", summa)
+# print(f"Сумма цифр числа {numb} равна:", summa)
 
 #Вариант 2
-numb = input("Введите число: ")
-n = len(numb)
-number = int(numb) * 10 ** n
+number = input("Введите число: ")
+n = int(float((number).replace(",", ".")) * (10 ** (len(number) - 2)))
 summa = 0 
-for i in range(n):
-    summa += number % 10
-    number // 10 
-    print(summa)
+while (n != 0):
+    summa += n % 10
+    n = n // 10 
+print(f"Сумма цифр числа {number} равна:", summa)
