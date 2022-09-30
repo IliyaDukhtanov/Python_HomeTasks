@@ -10,7 +10,3 @@ if m in input_list:
 else:
     print("Число не входит в список")
 
-#     for digit in numb:
-#     if digit.isdigit():
-#         sum1 += int(digit)
-# print(f"Сумма цифр числа {numb} равна:", sum1)
