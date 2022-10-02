@@ -8,7 +8,7 @@ n_dec = int(input("Введите десятичное число: "))
 n = n_dec
 n_bin = ""
 if n == 0: n_bin = n
-while n > 0:
+while n:
     n_bin = str(n % 2) + n_bin
     n //= 2
 print(f"Десятичное число {n_dec} в двоичном виде равно {n_bin}")
