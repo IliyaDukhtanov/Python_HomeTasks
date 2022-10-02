@@ -7,6 +7,6 @@ input_list = input("Введите список чисел, разделенны
 prod_list = []
 if len(input_list) % 2 == 0: l = len(input_list) // 2   # для чётного числа эл-тов списка
 else: l = len(input_list) // 2 + 1                      # для нечётного числа эл-тов списка
-for i in range(l): prod_list.append(str(int(input_list[i]) * int(input_list[len(input_list) - 1 - i])))
+for i in range(l): prod_list.append(int(input_list[i]) * int(input_list[len(input_list) - 1 - i]))
 print("Исходный список",input_list)
 print("Результат перемножения пар чисел исходного списка",prod_list)
