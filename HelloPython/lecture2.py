@@ -8,7 +8,7 @@
 # w – открытие для записи данных
 # w+, r+
 
-# with open('file.txt', 'a') as data:
+# with open('D:\\Обучение\\Практика\\Python\\HelloPython\\file.txt', 'a') as data:
 #     data.write('line 1\n')
 #     data.write('line 2\n')
 
@@ -21,10 +21,12 @@
 
 #exit()
 
-# path = 'file.txt'  # чтение данных из файла. Все данные хранятся в текстовом представлении
+# path = 'D:\\Обучение\\Практика\\Python\\HelloPython\\file.txt'  # чтение данных из файла. Все данные хранятся в текстовом представлении
 # data = open(path, 'r')
+# list_file = []
 # for line in data:
-#     print(line)
+#     list_file.append(line.replace("\n", ""))
+# print(list_file)
 # data.close()
 
 
@@ -52,7 +54,7 @@
 #     return res
 # print(concatenatio('a', 's', 'd', 'w')) # asdw
 # print(concatenatio('a', '1', 'd', '2')) # a1d2
-# print(conatenatio(1, 2, 3, 4)) # TypeError: ...
+# print(concatenatio(1, 2, 3, 4)) # TypeError: ...
 
 
 # Рекурсия
@@ -89,13 +91,19 @@
 # print(t[-2]) # green
 # # print(t[-200]) # IndexError: tuple index out of range
 # for e in t:
-# print(e) # red green blue
+#     print(e) # red green blue
 # t[0] = 'black' #
 
+# a = (3, 4, 5)
+# print(a)
+# print(a[0])
+# for item in a: 
+#     print(item)
+    
 # t = tuple(['red', 'green', 'blue'])
 # red, green, blue = t
 # print('r:{} g:{} b:{}'.format(red, green, blue))
-# r:red g:green b:blue
+# #r:red g:green b:blue
 
 
 # Словари - Неупорядоченные коллекции произвольных объектов с доступом по ключу
@@ -107,9 +115,9 @@
 # 'down': '↓',
 # 'right': '→'
 # }
-# print(dictionary) # {'up':'↑', 'left':'←', 'down':'↓', 'right':'→'}
-# print(dictionary['left']) # ←
-# # типы ключей могут отличаться
+# # print(dictionary) # {'up':'↑', 'left':'←', 'down':'↓', 'right':'→'}
+# # print(dictionary['left']) # ←
+# # # типы ключей могут отличаться
 
 # print(dictionary['up']) # ↑
 # # типы ключей могут отличаться
@@ -118,10 +126,10 @@
 # #print(dictionary['type']) # KeyError: 'type'
 # del dictionary['left'] # удаление элемента
 # for item in dictionary: # for (k,v) in dictionary.items():
-# print('{}: {}'.format(item, dictionary[item]))
+#     print('{}: {}'.format(item, dictionary[item]))
 # # up: ↑
-# # down: ↓
-# # right: →
+# down: ↓
+# right: →
 
 
 # Множества - Неупорядоченная совокупность элементов
@@ -154,10 +162,15 @@
 # print(colors) # set()
 
 # a = {1, 2, 3, 5, 8}
+# print(a)
 # b = {2, 5, 8, 13, 21}
+# print(b)
 # c = a.copy() # c = {1, 2, 3, 5, 8}
+# print(c)
 # u = a.union(b) # u = {1, 2, 3, 5, 8, 13, 21}
+# print(u)
 # i = a.intersection(b) # i = {8, 2, 5}
+# print(i)
 # dl = a.difference(b) # dl = {1, 3}
 # dr = b.difference(a) # dr = {13, 21}
 # q = a \
