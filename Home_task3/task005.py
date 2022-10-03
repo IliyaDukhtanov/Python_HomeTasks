@@ -4,13 +4,20 @@
 
 ## Вариант 1
 def negaFibonacci(n):
-    list_negaFibonacci = [-1, 1, 0, 1, 1]
-    fib1 = fib2 = 1
-    for i in range(2, n):
-        fib1, fib2 = fib2, fib1 + fib2
-        list_negaFibonacci.append(fib2)
-        list_negaFibonacci.insert(0, (fib2 * (-1) ** i))
-    return list_negaFibonacci
+    list_negaFibonacci = [0]
+    if n == 0: 
+        return list_negaFibonacci
+    elif n == 1:
+        list_negaFibonacci = [1, 0, 1]
+        return list_negaFibonacci    
+    else:
+        list_negaFibonacci = [-1, 1, 0, 1, 1]
+        fib1 = fib2 = 1
+        for i in range(2, n):
+            fib1, fib2 = fib2, fib1 + fib2  # fib1 приравнивается к fib2, fib2 приравнивается к fib1 + fib2
+            list_negaFibonacci.append(fib2)
+            list_negaFibonacci.insert(0, (fib2 * (-1) ** i))
+        return list_negaFibonacci
 n = int(input("Введите число: "))
 print((f"Список чисел (нега)Фибоначчи для k = {n}: {negaFibonacci(n)}"))
 

@@ -12,8 +12,10 @@ for i in range(len(input_list)):
         j = round((float(input_list[i]) % 1) , 2)
         fract_list.append(j)
 for i in range(len(fract_list)):
-    if fract_list[i] > fract_list[iMax]: iMax = i
-    if fract_list[i] < fract_list[iMin]: iMin = i
+    if fract_list[i] > fract_list[iMax]: 
+        iMax = i
+    if fract_list[i] < fract_list[iMin]: 
+        iMin = i
 res = float(fract_list[iMax]) - float(fract_list[iMin])
 print("Список исходный значений: ",input_list)
 #print("Список дробных частей исходный значений:\n",fract_list)

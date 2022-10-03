@@ -7,7 +7,8 @@
 n_dec = int(input("Введите десятичное число: "))
 n = n_dec
 n_bin = ""
-if n == 0: n_bin = n
+if n == 0: 
+    n_bin = n
 while n:
     n_bin = str(n % 2) + n_bin
     n //= 2
