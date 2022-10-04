@@ -9,7 +9,7 @@ def simple_factor(m):
             m //= d
         else:
             d += 1
-    factor_list.append(m) # Добавим последнеё простое число
+    factor_list.append(m) # Добавим последнее простое число
     return factor_list 
 
 
