@@ -13,3 +13,6 @@ while n:
     n_bin = str(n % 2) + n_bin
     n //= 2
 print(f"Десятичное число {n_dec} в двоичном виде равно {n_bin}")
+
+print(bin(n_dec)[2:])  # вывод со срезом
+
