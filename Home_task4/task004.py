@@ -36,7 +36,7 @@ polynomial_list = create_polynomial(input_list)
 print(input_list)
 print(create_polynomial(input_list))
 
-with open('D:\\Обучение\\Практика\\Python\\Home_task4\\Polynomial.txt', 'a') as data:
+with open('D:\\Обучение\\Практика\\Python\\Home_task4\\Polynomial_task004.txt', 'a') as data:
     data.write(f"\n{create_polynomial(input_list)}")
 
 
