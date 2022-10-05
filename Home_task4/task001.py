@@ -5,23 +5,56 @@
 
 # Формула Лейбница для вычисления Пи:
 
-from cmath import pi
+# from cmath import pi
 
-def calc_pi(d):
-    k = 1      # знаменатель формулы Лейбница
-    sum_pi = 0
-    for i in range (d):
-        if i % 2 == 0:      # определение чётного элемента для дальнейшего сложения 
-            sum_pi += 4 / k
-        else:               # опредление нечётного элемента для вычитания
-            sum_pi -= 4 / k
-        k += 2
-    return sum_pi
+# def calc_pi(d):
+#     k = 1      # знаменатель формулы Лейбница
+#     sum_pi = 0
+#     for i in range (d):
+#         if i % 2 == 0:      # определение чётного элемента для дальнейшего сложения 
+#             sum_pi += 4 / k
+#         else:               # опредление нечётного элемента для вычитания
+#             sum_pi -= 4 / k
+#         k += 2
+#     return sum_pi
 
 
-d = int(input("Введите требуемую точность: "))
-n = int(input("Введите количество знаков после запятой для вывода результата: "))
-print("Результат вычисления Пи:", calc_pi(d))
-print (f'Число Пи: {f"%.{len(str(int(calc_pi(d))))+n+1}s" % (calc_pi(d))}')
-print (f'Число Пи: {f"%.{len(str(int(pi)))+n+1}s" % (pi)}')
+# d = int(input("Введите требуемую точность: "))
+# n = int(input("Введите количество знаков после запятой для вывода результата: "))
+# print("Результат вычисления Пи:", calc_pi(d))
+# print (f'Число Пи: {f"%.{len(str(int(calc_pi(d))))+n+1}s" % (calc_pi(d))}')
+# print (f'Число Пи: {f"%.{len(str(int(pi)))+n+1}s" % (pi)}')
 
+
+# вычисляет сумму ряда e ^ (-x) с заданной точностью
+#
+# e ^ (-x) = 1 - x + (x ^ 2) / 2! - (x ^ 3) / 3! +
+#            + ... + (-1 ^ n) * (x ^ n) / n!
+
+import math
+
+def emx(x, eps):
+    s, sl, psl, i = 0, 1, 0, 1
+    while abs(sl - psl) > eps:
+        s += sl
+        psl = sl
+        sl *= -x / i
+        i += 1
+    return s
+
+if __name__ == '__main__':
+
+    print(math.exp(-4))
+
+    for e in (
+        1,
+        0.1,
+        0.01,
+        0.001,
+        0.0001,
+        0.00001,
+        0.000001,
+        0.0000001,
+        ):
+        x = 4
+        print('{} eps={}'.format(emx(x, e), e))

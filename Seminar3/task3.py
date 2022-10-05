@@ -38,6 +38,6 @@ if count1 < 2:
 # n = input()
 
 # print(ent_list.count(n)) # Выводит количество вхождений
-# count = 0
-# if
+
+# if count == 0:
 #     print('Второй позиции нет.')
