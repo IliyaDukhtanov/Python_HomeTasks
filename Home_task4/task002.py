@@ -4,12 +4,12 @@ def simple_factor(m):
     factor_list = []
     d = 2 # первый делитель
     while d * d <= m:
-        if n % d == 0:
+        while m % d == 0:
             factor_list.append(d)
-            m //= d
-        else:
-            d += 1
-    factor_list.append(m) # Добавим последнее простое число
+            m = m // d
+        d = d + 1
+    if m > 1: 
+        factor_list.append(m) # Добавим последнее простое число
     return factor_list 
 
 
