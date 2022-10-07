@@ -13,7 +13,7 @@ def create_list(k, m, n):    # создание списка случайных 
 def create_polynomial(input_list):   # создание и форматирование многочлена на основании списка чисел
     polynomial_list = []
     for i in range(len(input_list)):
-        if input_list[-1 - i] !=0:
+        if input_list[-1 - i] != 0:
             polynomial_list.insert(0, str(input_list[-1 -i]) + "*x^" + str(i)) 
     polynomial_str = " + ".join(polynomial_list)
     polynomial_str += " = 0"
