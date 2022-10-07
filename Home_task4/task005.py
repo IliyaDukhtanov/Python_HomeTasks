@@ -24,6 +24,7 @@
 #     data.write(pol_sum_str + "\n")
 
 
+# Вариант препода
 
 def get_coeffs(digits):
     digits = digits.strip().strip(' = 0')
