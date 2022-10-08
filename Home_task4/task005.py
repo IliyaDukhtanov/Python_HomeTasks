@@ -31,12 +31,12 @@ def get_coeffs(digits):
     digits = digits.split(' + ')
     coeffs = {}
     for i in digits:
-        a, *b = i.split(' * x ** ')
+        a, *b = i.split(' * x ** ')    # (' * x ** ')
         if b:
             coeffs[int(b[0])] = int(a)
         else:
             if i.endswith('x'):
-                a, *b = i.split(' * x')
+                a, *b = i.split(' * x')    # (' * x')
                 coeffs[1] = int(a)
             else:
                 coeffs[0] = int(i)
@@ -51,7 +51,7 @@ def sum_coeffs(d, coeffs):
     return coeffs
 
 
-with open('res.txt') as f:
+with open('D:\\Обучение\\Практика\\Python\\Home_task4\\Polynomial_task004.txt') as f:
     digits1 = f.read()
     digits2 = digits1[:]
 coeffs1 = get_coeffs(digits1)
@@ -64,13 +64,13 @@ max_num = max(coeffs.keys())
 for i, j in coeffs.items():
     res += str(j)
     if i != 0 and j != 0 and i != 1:
-        res += ' * x ** '
+        res += ' * x ** '     # ' * x ** '
         res += str(i)
         res += ' + '
     elif j == 0:
         continue
     elif i == 1:
-        res += ' * x + '
+        res += ' * x + '     # ' * x + '
     else:
         res += ' = 0'
 print(res)
