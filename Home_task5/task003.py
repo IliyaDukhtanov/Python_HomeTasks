@@ -8,7 +8,7 @@ def draw_board(b):   # игровое поле
         print("-" * 13)
 
 
-def take_move(player_symbol):
+def take_move(player_symbol):  # ход игрока с проверками
     valid = False
     while not valid:
         player_step = input("Куда поставим " + player_symbol + "? ")
@@ -27,7 +27,7 @@ def take_move(player_symbol):
             print("Некорректный ввод. Введите число от 1 до 9")
 
 
-def chek_win(b):
+def chek_win(b):   # проверка наличия победителя
     win_lines = [[0,1,2], # победные линии
                  [3,4,5],
                  [6,7,8],
@@ -45,8 +45,8 @@ def chek_win(b):
     return win
  
 
-def main_game(b):
-    counter = 0
+def main_game(b):   # основная игра
+    counter = 0   # победителя не будет раньше, чем на пятом ходу
     winner = False
     while not winner:
         draw_board(b)
@@ -55,7 +55,7 @@ def main_game(b):
         else: 
             take_move("O")
         counter += 1
-        if counter > 4:
+        if counter > 4: # победителя не будет раньше, чем на пятом ходу
             tmp = chek_win(b)
             if tmp: 
                 print("\n" + tmp, "выиграл!")
@@ -68,8 +68,6 @@ def main_game(b):
 
 
 print("\nИгра Крестики-нолики для двух игроков ")
-# board = list(range(1,10))
-
 # Инициализация карты
 board = [1,2,3,
          4,5,6,
