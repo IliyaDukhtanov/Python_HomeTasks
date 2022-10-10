@@ -15,11 +15,11 @@ def play_game0(a, b, pl, mes):   # игра человек против чело
     while a > 0:
         print(f'\n{pl[count % 2]}, {random.choice(mes)}')   # циклы перехода хода и попытки взять конфеты
         move = int(input())
-        if move > a or move > b:
+        if move < 1 or move > b:
             print(f'Не пытайтесь взять слишком много конфет, можно взять не более {b}, текущее количество конфет: {a}')
             attempt = 3
             while attempt > 0:
-                if a >= move <= b:
+                if move <= a and move <= b and move > 0:
                     break
                 print(f'Попробуйте ещё раз, у Вас {attempt} попытки')
                 move = int(input())
@@ -45,11 +45,11 @@ def play_game1(a, b, pl, mes):   # игра с ботом
         else:
             print(f'\n{pl[0]}, {choice(mes)}')
             move = int(input())
-            if move > a or move > b:
+            if move < 1 or move > b:
                 print(f'Не пытайтесь взять слишком много конфет, можно взять не более {b}, текущее количество конфет: {a}')
                 attempt = 3
                 while attempt > 0:
-                    if a >= move <= b:
+                    if move <= a and move <= b and move > 0:
                         break
                     print(f'Попробуйте ещё раз, у Вас {attempt} попытки')
                     move = int(input())
@@ -77,11 +77,11 @@ def play_game2(a, b, pl, mes):    # игра со смарт-ботом
         else:
             print(f'\n{pl[0]}, {choice(mes)}')
             move = int(input())
-            if move > a or move > b:
+            if move < 1 or move > b:
                 print(f'Не пытайтесь взять слишком много конфет, можно взять не более {b}, текущее количество конфет: {a}')
                 attempt = 3
                 while attempt > 0:
-                    if a >= move <= b:
+                    if move <= a and move <= b and move > 0:
                         break
                     print(f'Попробуйте ещё раз, у Вас {attempt} попытки')
                     move = int(input())
