@@ -32,13 +32,13 @@ def read_data(file):   # Получение данных из файла
     return input_string
 
 
-text = "D:\\Обучение\\Практика\\Python\\Home_task5\\input_text.txt"
-tx = 'D:\\Обучение\\Практика\\Python\\Home_task5\\encoded_input_text.txt'
-text1 = "D:\\Обучение\\Практика\\Python\\Home_task5\\decoded_text.txt"
-print(read_data(text))
-print(encode_rle(read_data(text)))
+input_text = "D:\\Обучение\\Практика\\Python\\Home_task5\\input_text.txt"   # начальный текст
+tx = 'D:\\Обучение\\Практика\\Python\\Home_task5\\encoded_input_text.txt'   # сжатый текст
+text1 = "D:\\Обучение\\Практика\\Python\\Home_task5\\decoded_text.txt"      # восстановленный текст
+print(read_data(input_text))
+print(encode_rle(read_data(input_text)))
 with open(str(tx), 'w') as data:
-    data.write(encode_rle(read_data(text)))
+    data.write(encode_rle(read_data(input_text)))
 print(decode_rle(read_data(tx)))
 with open(str(text1), 'w') as data:
     data.write(decode_rle(read_data(tx)))
