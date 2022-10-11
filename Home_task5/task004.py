@@ -27,18 +27,18 @@ def decode_rle(data):   # расшифровка строки
 
        
 def read_data(file):   # Получение данных из файла
-    with open(str(file), 'r') as data:
+    with open(str(file), "r", encoding="UTF-8") as data:
         input_string = data.read()
     return input_string
 
 
-input_text = "D:\\Обучение\\Практика\\Python\\Home_task5\\input_text.txt"   # начальный текст
+input_text = "D:\\Обучение\\Практика\\Python\\Home_task5\\input_text.txt"   # исходный текст
 tx = 'D:\\Обучение\\Практика\\Python\\Home_task5\\encoded_input_text.txt'   # сжатый текст
 text1 = "D:\\Обучение\\Практика\\Python\\Home_task5\\decoded_text.txt"      # восстановленный текст
-print(read_data(input_text))
-print(encode_rle(read_data(input_text)))
-with open(str(tx), 'w') as data:
+print(read_data(input_text))  # исходный текст 
+print(encode_rle(read_data(input_text))) # сжатый текст
+with open(str(tx), "w", encoding="UTF-8") as data:
     data.write(encode_rle(read_data(input_text)))
-print(decode_rle(read_data(tx)))
-with open(str(text1), 'w') as data:
+print(decode_rle(read_data(tx)))   # восстановленный текст
+with open(str(text1), "w", encoding="UTF-8") as data:
     data.write(decode_rle(read_data(tx)))

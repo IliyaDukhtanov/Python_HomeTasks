@@ -9,6 +9,7 @@
 import random
 from random import randint, choice
 
+
 def play_game0(a, b, pl, mes):   # игра человек против человека
     count = choose_first_move()
     print(f'\nПервый ход достаётся игроку {pl[count % 2]}')
