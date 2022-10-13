@@ -40,7 +40,7 @@
 #     data = data[space_pos+1:]   # добавить в список чисел
 
 # out = []
-# for e in numbers: робегаемя по списку
+# for e in numbers: # пробегаемя по списку
 #     if not e % 2:
 #         out.append((e, e **2))  # создаем кортеж чётных чисел
 # print(out)
@@ -55,11 +55,11 @@
 # data = where(lambda e: not e % 2, data)
 # data = list(select(lambda e: (e, e**2), data))
 
-# data = '1 2 3 5 8 15 23 38'.split()
-# data = list(map(int, data))
-# data = list(filter(lambda e: not e % 2, data))
-# data = list(map(lambda e: (e, e**2), data))
-# print(data)
+data = '1 2 3 5 8 15 23 38'.split()
+data = list(map(int, data))
+data = list(filter(lambda e: not e % 2, data))
+#data = list(map(lambda e: (e, e**2), data))
+print(data)
 
 
 # Функция map() применяет указанную функцию к каждому элементу итерируемого объекта и возвращает итератор с новыми объектами.
