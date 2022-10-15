@@ -15,5 +15,5 @@ def calculation():
         res = calc_mult(a, b)
     elif op == "4": 
         res = calc_div(a, b)
-    print(res)
+    print("Результат операции:", res)
     write_log(a, b, op, res)
