@@ -24,6 +24,7 @@
 
 # Вариант кода выше с использованием Map и List Comprehension
 
-input_list = list(map(float, input("Введите числа через пробел:\n").split()))  
+#input_list = list(map(float, input("Введите числа через пробел:\n").split())) 
+input_list = list(map(lambda x: float(x), input("Введите числа через пробел:\n").split()))
 fract_lst = [round(i % 1, 2) for i in input_list if i % 1 != 0]
 print(f"Для списка исходных заначений: {input_list} \nразница между максимальным и минимальным значением дробной части элементов: {max(fract_lst) - min(fract_lst)}")

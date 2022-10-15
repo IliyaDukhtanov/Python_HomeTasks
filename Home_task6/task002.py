@@ -20,10 +20,10 @@
 
 def get_list_lenght(my_list): 
     if len(my_list) % 2 == 0: 
-        l = len(my_list) // 2   # для чётного числа эл-тов списка
+        le = len(my_list) // 2   # для чётного числа эл-тов списка
     else: 
-        l = len(my_list) // 2 + 1                      # для нечётного числа эл-тов списка
-    return l
+        le = len(my_list) // 2 + 1                      # для нечётного числа эл-тов списка
+    return le
 
 
 input_list = list(map(int, input("Введите список чисел, разделенных пробелом: ").split()))
